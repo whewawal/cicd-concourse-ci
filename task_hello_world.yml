@@ -6,5 +6,4 @@ image_resource:
   source: {repository: python}
 
 run:
-  path: python
-  args: [hello-world.py]
+  path: hello-world.py
