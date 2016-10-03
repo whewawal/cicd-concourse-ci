@@ -6,4 +6,4 @@ image_resource:
   source: {repository: python}
 
 run:
-  path: hello-world.sh
+  path: github-resource/hello-world.sh
