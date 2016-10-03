@@ -4,6 +4,7 @@ resources:
   type: git
   source:
     uri: https://github.com/whewawal/cicd-concourse-ci.git
+    branch: master
 
 jobs:
 - name: python-hello-world
@@ -11,4 +12,12 @@ jobs:
   plan:
   - get: github-resource
   - task: hello-world
-    file: github-resource/task_hello_world.yml
+    config:
+      platform: linux
+      image: docker:///python
+      inputs:
+      - name: github-resource
+        path: .
+      run:
+        path: ./hello-world.sh
+
