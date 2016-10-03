@@ -1,0 +1,10 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: python}
+
+run:
+  path: python
+  args: [hello-world.py]

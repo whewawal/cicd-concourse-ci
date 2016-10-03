@@ -1,0 +1,14 @@
+---
+resources:
+- name: github-resource
+  type: git
+  source:
+    uri: git@github.com:whewawal/cicd-concourse-ci.git
+
+jobs:
+- name: python-hello-world
+  public: true
+  plan:
+  - get: github-resource
+  - task: hello-world
+    file: github-resource/task_hello_world.yml
