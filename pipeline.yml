@@ -3,7 +3,7 @@ resources:
 - name: github-resource
   type: git
   source:
-    uri: https://github.com/cicd-concourse-ci.git
+    uri: https://github.com/whewawal/cicd-concourse-ci.git
 
 jobs:
 - name: python-hello-world
