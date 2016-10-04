@@ -6,13 +6,22 @@ resources:
     uri: https://github.com/whewawal/cicd-concourse-ci.git
     branch: master
 
+- name: tool-docker-image
+  type: docker-image
+  source:
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-create-concourse-go-image}}
+
 jobs:
 - name: unit-test
   public: true
   plan:
   - get: github-code
-  - task: spin-docker-image
-    file: github-code/spin-docker-image.yml
+  - put: docker-image
+    params:
+      build: github-code
   - task: run-unit-test
     file: github-code/unit-test.yml 
 
