@@ -6,7 +6,7 @@ image_resource:
   source: {repository: python}
 
 inputs:
-      - name: github-resource
+      - name: github-code
         path: .
 run:
   path: ./run-unit-test.sh
