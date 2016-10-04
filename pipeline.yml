@@ -12,7 +12,7 @@ resources:
     email: {{docker-hub-email}}
     username: {{docker-hub-username}}
     password: {{docker-hub-password}}
-    repository: {{docker-create-concourse-go-image}}
+    repository: {{docker-hub-image-resource}}
 
 jobs:
 - name: unit-test
