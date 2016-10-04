@@ -2,4 +2,4 @@
 
 set -e -u -x
 
-python hello-world.py
+python2.7 hello-world.py
