@@ -19,7 +19,7 @@ jobs:
   public: true
   plan:
   - get: github-code
-  - put: docker-image
+  - put: tool-docker-image
     params:
       build: github-code
   - task: run-unit-test

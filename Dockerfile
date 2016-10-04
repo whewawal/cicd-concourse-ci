@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev 
 
 RUN locale-gen en_US.UTF-8  
-COPY github-code/requirements.txt /tmp/
+COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 COPY github-code/acicobra-1.3_2h-py2.7.egg /opt/
 COPY github-code/acimodel-1.3_2h-py2.7.egg /opt/
