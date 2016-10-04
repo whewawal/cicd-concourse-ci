@@ -3,7 +3,7 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: python}
+  source: {repository: whewawal/aci_docker_image}
 
 inputs:
       - name: github-code
