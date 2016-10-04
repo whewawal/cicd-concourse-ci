@@ -1,16 +1,16 @@
 ---
 resources:
-- name: github-resource
+- name: github-code
   type: git
   source:
     uri: https://github.com/whewawal/cicd-concourse-ci.git
     branch: master
 
 jobs:
-- name: python-hello-world
+- name: unit-test
   public: true
   plan:
-  - get: github-resource
-  - task: hello-world
-    file: github-resource/task_hello_world.yml 
+  - get: github-code
+  - task: run-unit-test
+    file: github-code/unit-test.yml 
 

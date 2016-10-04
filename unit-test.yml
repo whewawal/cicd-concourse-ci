@@ -1,0 +1,12 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: python}
+
+inputs:
+      - name: github-resource
+        path: .
+run:
+  path: ./run-unit-test.sh
