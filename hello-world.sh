@@ -2,4 +2,4 @@
 
 set -e -u -x
 
-python hello-worl.py
+python hello-world.py
