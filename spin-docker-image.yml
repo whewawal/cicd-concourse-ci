@@ -1,0 +1,11 @@
+---
+platform: linux
+
+image: docker:///nwss/aci-build
+
+inputs:
+      - name: github-code
+        path: .
+run:
+  path: ./build-aci-image.sh
+

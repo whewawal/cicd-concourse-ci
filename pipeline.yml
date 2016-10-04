@@ -11,6 +11,8 @@ jobs:
   public: true
   plan:
   - get: github-code
+  - task: spin-docker-image
+    file: github-code/spin-docker-image.yml
   - task: run-unit-test
     file: github-code/unit-test.yml 
 
