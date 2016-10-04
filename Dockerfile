@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y \
 RUN locale-gen en_US.UTF-8  
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
-COPY github-code/acicobra-1.3_2h-py2.7.egg /opt/
-COPY github-code/acimodel-1.3_2h-py2.7.egg /opt/
+COPY acicobra-1.3_2h-py2.7.egg /opt/
+COPY acimodel-1.3_2h-py2.7.egg /opt/
 RUN easy_install -Z /opt/acicobra-1.3_2h-py2.7.egg
 RUN easy_install -Z /opt/acimodel-1.3_2h-py2.7.egg
 EXPOSE 5000
