@@ -3,7 +3,7 @@ resources:
 - name: github-code
   type: git
   source:
-    uri: https://github.com/whewawal/cicd-concourse-ci.git
+    uri: git@github.com:whewawal/cicd-concourse-ci.git
     branch: master
     private_key: |
       -----BEGIN RSA PRIVATE KEY-----
