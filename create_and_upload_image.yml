@@ -71,6 +71,7 @@ jobs:
   public: true
   plan:
   - get: github-code
+    trigger: true
   - put: tool-docker-image
     params:
       build: github-code
