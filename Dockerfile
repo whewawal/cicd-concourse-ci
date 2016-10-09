@@ -5,6 +5,7 @@ RUN apk add python
 RUN apk add py-pip
 RUN apk add python-dev
 RUN apk add py-requests
+RUN apk add curl
 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
